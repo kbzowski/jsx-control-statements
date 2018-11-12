@@ -24,7 +24,8 @@
     "each",
     "loop",
     "babel",
-    "react-component"
+    "react-component",
+    "babel-plugin-macros"
   ],
   "license": "MIT",
   "scripts": {
