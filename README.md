@@ -94,7 +94,7 @@ Babel can be used and configured in many different ways, so
 [use this guide](https://github.com/AlexGilleran/jsx-control-statements/wiki/Installation) to pick a configuration
 which fits your setup.
 
-## Babel Macro
+### Babel Macro
 Once you've using [babel-plugin-macros](https://www.npmjs.com/package/babel-plugin-macros) you can import/require `jsx-control-statements`
 macro. For example:
 ```javascript
