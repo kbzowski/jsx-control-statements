@@ -21,7 +21,7 @@ describe("Choose macro works", function() {
 
   it("should render first when block when condition true", function() {
     var rendered = util.render(Fixture, {when1: true});
-    expect(rendered).to.contain("WhenBlock1");
+    expect(rendered).to.match(util.matchTextWithinSpanWithinDiv("WhenBlock1"));
   });
 });
 

@@ -1,4 +1,4 @@
-const {createMacro, MacroError} = require("babel-plugin-macros");
+const {createMacro} = require("babel-plugin-macros");
 var transformFor = require("./forStatement");
 var transformIf = require("./ifStatement");
 var transformChoose = require("./chooseStatement");
@@ -32,10 +32,7 @@ function transformIfMacro({references, state, babel}) {
         var handler = nodeHandlers[nodeName];
         if (!handler) return;
 
-        var replacement = handler(node.parent, file);
-        var childrenExp = types.jSXExpressionContainer(replacement);
-        var opening = types.jSXOpeningElement(types.jsxIdentifier("div"), []);
-        var target = types.jSXElement(opening, null, [childrenExp], false);
+        var target = types.jSXExpressionContainer(handler(node.parent, file));
         referencePath.parentPath.parentPath.replaceWith(target);
       }
     });
