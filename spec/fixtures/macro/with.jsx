@@ -1,13 +1,13 @@
 var React = require("react");
-var If = require("../../../src/macro/ifStatement.macro")
+var {With} = require("../../../src/macro")
 
 module.exports = React.createClass({
   render: function() {
     return (
       <div>
-        <If condition={true}>
-          <span>IfBlock</span>
-        </If>
+        <With attr="TEST">
+          {attr}
+        </With>
       </div>
     );
   }
